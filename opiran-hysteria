@@ -16,6 +16,9 @@ RED="\033[31m"
 GREEN="\033[32m"
 YELLOW="\033[33m"
 BLUE="\033[36m"
+NC="\033[0m"
+WHITE="\033[37m"
+MAGENTA="\033[35m"
 PLAIN='\033[0m'
 
 # system recognizing
@@ -264,33 +267,31 @@ menu() {
     clear
     check_status
 
-    echo "#############################################################"
-    echo -e "#                 ${RED} OPIran Hysteria${PLAIN}                   #"
-    echo -e "# ${GREEN}作者${PLAIN}: Misaka No                                           #"
-    echo -e "# ${GREEN}网址${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}论坛${PLAIN}: https://owo.misaka.rest                             #"
-    echo -e "# ${GREEN}TG群${PLAIN}: https://t.me/misakanetcn                            #"
-    echo "#############################################################"
+    echo -e "${WHITE}────────────────────────────────────────────────────────"
+    echo -e "            ${YELLOW} OPIran Hysteria${PLAIN}"
     echo ""
-
-    echo -e "  ${GREEN}1.${PLAIN}  安装Hysieria "
-    echo -e "  ${GREEN}2.  ${RED}卸载Hysieria ${PLAIN}"
-    echo " -------------"
-    echo -e "  ${GREEN}3.${PLAIN}  启动Hysieria "
-    echo -e "  ${GREEN}4.${PLAIN}  重启Hysieria "
-    echo -e "  ${GREEN}5.${PLAIN}  停止Hysieria "
-    echo " -------------"
-    echo -e "  ${GREEN}0.${PLAIN} 退出"
+    echo -e " ${GREEN}TG-Group${NC} >>>> ${MAGENTA}@OPIranCluB ${NC}"
+    echo -e "${WHITE}────────────────────────────────────────────────────────${NC}"
     echo ""
-    echo -e "Hysteria 状态：$status"
+    echo -e "${CYAN} Hysteria status${NC} => $status"
     echo ""
-    read -p " 请选择操作[0-5]：" answer
+    echo -e "  ${RED}1)${PLAIN} =>  ${CYAN}Install Hysteria Server ${NC}"
+    echo -e "  ${RED}2)${PLAIN} =>  ${CYAN}Start & Enable Hysteria Server${NC}"
+    echo -e "  ${RED}3)${PLAIN} =>  ${CYAN}stop & Disable Hysteria Server ${NC}"
+    echo ""
+    echo -e "${WHITE}────────────────────────────────────────────────────────${NC}"
+    echo ""
+    echo -e "  ${RED}4)${PLAIN} =>  ${CYAN}Restart Hysteria ${NC}"
+    echo -e "  ${RED}5)${PLAIN} =>  ${YELLOW}Uninstall Hysteria Server ${NC}"
+    echo -e "  ${RED}E)${PLAIN} =>  ${YELLOW}Exit${NC}"
+    echo ""
+    read -p " Enter option number [0-5 / E]：" answer
     case $answer in
         1) installHysteria ;;
-        2) uninstall ;;
-        3) start_hysteria ;;
+        2) start_hysteria ;;
+        3) stop_hysteria ;;
         4) restart ;;
-        5) stop_hysteria ;;
+        5) uninstall ;;
     esac
 }
 
