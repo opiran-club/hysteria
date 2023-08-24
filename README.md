@@ -4,7 +4,8 @@ SUPPORTS PURE IPV4 AND PURE IPV6 VPS DIRECT INSTALLATION, AND MAINSTREAM LINUX S
 
 اسکریپت مخصوص ای پی ۴ و ۶ هیستریا
 
-------------------------------------------   OPIran-Hyteria   --------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   OPIran-Hyteria   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 this is the shortened of yong-script for neccesary options
 
 
@@ -17,7 +18,7 @@ this is the shortened of yong-script for neccesary options
 wget -4 -N https://raw.githubusercontents.com/opiran-club/hysteria/master/opiran-hysteria.sh && chmod +x opiran-hysteria.sh && ./opiran-hysteria.sh
 ```
 
-------------------------------------------    Yong-Hyteria   --------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~    Yong-Hyteria   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 THIS IS MODED AND TRANSLATED YONGKKK SCRIPT INTO ENGLISH AND ALL CREDITED BY [BROTHER-YONG](https://github.com/yonggekkk/Hysteria-yg)
 
