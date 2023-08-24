@@ -17,7 +17,7 @@ this is the shortened of yong-script for neccesary options
  - using root previllage
    
 ```
-wget -4 -N https://raw.githubusercontents.com/opiran-club/hysteria/master/opiran-hysteria.sh && chmod +x opiran-hysteria.sh && ./opiran-hysteria.sh
+wget -4 -N https://raw.githubusercontents.com/opiran-club/hysteria/master/opiran-hysteria.sh && bash opiran-hysteria.sh
 ```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -33,7 +33,7 @@ THIS IS MODED AND TRANSLATED YONGKKK SCRIPT INTO ENGLISH AND ALL CREDITED BY [BR
  - using root previllage
    
 ```
-wget -4 -N https://raw.githubusercontents.com/opiran-club/hysteria/master/yong-hysteria.sh && chmod +x yong-hysteria.sh && ./yong-hysteria.sh
+wget -4 -N https://raw.githubusercontents.com/opiran-club/hysteria/master/yong-hysteria.sh && bash yong-hysteria.sh
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
