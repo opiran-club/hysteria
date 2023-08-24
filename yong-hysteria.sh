@@ -3,6 +3,8 @@ hyygV="23.3.17 V 5.9"
 remoteV=`wget -qO- https://gitlab.com/rwkgyg/hysteria-yg/raw/main/hysteria.sh | sed  -n 2p | cut -d '"' -f 2`
 chmod +x /root/hysteria.sh 
 red='\033[0;31m'
+green='\033[0;32m'
+cyan='\033[0;36m'
 yellow='\033[0;33m'
 bblue='\033[0;34m'
 plain='\033[0m'
@@ -823,33 +825,33 @@ journalctl -u hysteria-server --output cat -f
 start_menu(){
 hysteriastatus
 clear
-white "────────────────────────────────────────────────────────────────────────────────────"
+white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 echo ""
-yellow "                                YONGKKK HYSTERIA"
+yellow "                                YONGKKK HYSTERIA${PLAIN}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────"
-green "after the hysteria-yg script is successfully installed, enter the script again with a shortcut of hy"
-red "────────────────────────────────────────────────────────────────────────────────────"
+white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+green "after the hysteria-yg script is successfully installed, enter the script again with a shortcut of hy${PLAIN}"
+red "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 echo ""
-echo -e "${red}1)${PLAIN} =>  Install hysteria (required) "
-echo -e "${red}2)${PLAIN} =>  Uninstall hysteria "
+echo -e "${red}1)${PLAIN} =>  ${green}Install hysteria (required) ${PLAIN}"
+echo -e "${red}2)${PLAIN} =>  ${green}Uninstall hysteria ${PLAIN}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────"
+white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 echo ""
-echo -e "${red}3)${PLAIN} =>  Change configuration (IP priority level, transmission protocol, certificate type, verify password, range port)"
-echo -e "${red}4)${PLAIN} =>  stop, open, restarthysteria"
-echo -e "${red}5)${PLAIN} =>  Update hysteria-yg installation script"
-echo -e "${red}6)${PLAIN} =>  Update hysteria kernel"
+echo -e "${red}3)${PLAIN} =>  ${green}Change configuration (IP priority level, transmission protocol, certificate type, verify password, range port)${PLAIN}"
+echo -e "${red}4)${PLAIN} =>  ${green}stop, open, restarthysteria${PLAIN}"
+echo -e "${red}5)${PLAIN} =>  ${green}Update hysteria-yg installation script${PLAIN}"
+echo -e "${red}6)${PLAIN} =>  ${green}Update hysteria kernel${PLAIN}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────"
+white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 echo ""
-echo -e "${red}7)${PLAIN} =>  Display the current hysteria sharing link, QR code, V2rayN configuration file, Clash-meta configuration file"
-echo -e "${red}8)${PLAIN} =>  ACME certificate management menu"
-echo -e "${red}9)${PLAIN} =>  Install WARP (optional)"
-echo -e "${red}10)${PLAIN}=>  View hysteria operation log"
-echo -e "${red}0)${PLAIN} =>  exit script"
+echo -e "${red}7)${PLAIN} =>  ${green}Display the current hysteria sharing link, QR code, V2rayN configuration file, Clash-meta configuration file${PLAIN}"
+echo -e "${red}8)${PLAIN} =>  ${green}ACME certificate management menu${PLAIN}"
+echo -e "${red}9)${PLAIN} =>  ${green}Install WARP (optional)${PLAIN}"
+echo -e "${red}10)${PLAIN}=>  ${green}View hysteria operation log${PLAIN}"
+echo -e "${red}0)${PLAIN} =>  ${green}exit script${PLAIN}"
 echo ""
-red "────────────────────────────────────────────────────────────────────────────────────"
+red "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 if [[ -n $(systemctl status hysteria-server 2>/dev/null | grep -w active) && -f '/etc/hysteria/config.json' ]]; then
 if [ "${hyygV}" = "${remoteV}" ]; then
 echo -e "Current hysteria-yg install script version number：${bblue}${hyygV}${plain} ，Already the latest version\n"
@@ -866,16 +868,16 @@ echo -e "Current hysteria installed kernel version number：${bblue}${loVERSION}
 echo -e "Check to latest hysteria kernel version number：${yellow}${hyVERSION}${plain} ，You can choose6 to update"
 fi
 fi
-red "────────────────────────────────────────────────────────────────────────────────────"
+red "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
 echo ""
 white "VPS system information is as follows:"
 white "Operating system: $(blue "$op")" && white "Kernel version: $(blue "$version")" && white "CPU architecture: $(blue "$cpu")" && white "Virtualization type : $(blue "$vi")"
 white "$status"
 echo
-white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${PLAIN}"
 echo -e "          ${yellow}Translate and moded By${plain} ${green} OPIran${plain}"
 echo -e "             ${yellow}TG-Group${plain} ${green} @OPIranCluB${plain}"
-white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+white "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${PLAIN}"
 
 readp "Please enter the number:" Input
 case "$Input" in     
