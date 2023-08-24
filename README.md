@@ -1,3 +1,10 @@
-# hysteria
+
 اسکریپت مخصوص ای پی ۴ و ۶ هیستریا
-wget -N https://raw.githubusercontents.com/opiran-club/hysteria/master/opiran-hysteria.sh && bash opiran-hysteria.sh
+
+
+
+‼️ INSTRUCTION ‼️
+```
+wget -4 -N -O opiran-hysteria https://raw.githubusercontents.com/opiran-club/hysteria/master/opiran-hysteria && chmod +x opiran-hysteria && ./opiran-hysteria
+```
+
