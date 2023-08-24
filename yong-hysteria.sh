@@ -3,6 +3,7 @@ hyygV="23.3.17 V 5.9"
 remoteV=`wget -qO- https://gitlab.com/rwkgyg/hysteria-yg/raw/main/hysteria.sh | sed  -n 2p | cut -d '"' -f 2`
 chmod +x /root/hysteria.sh 
 red='\033[0;31m'
+nc='\033[0;0m'
 green='\033[0;32m'
 cyan='\033[0;36m'
 yellow='\033[0;33m'
@@ -825,33 +826,33 @@ journalctl -u hysteria-server --output cat -f
 start_menu(){
 hysteriastatus
 clear
-white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+white "────────────────────────────────────────────────────────────────────────────────────${nc}"
 echo ""
 yellow "                                YONGKKK HYSTERIA${PLAIN}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
-green "after the hysteria-yg script is successfully installed, enter the script again with a shortcut of hy${PLAIN}"
-red "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+white "────────────────────────────────────────────────────────────────────────────────────${nc}"
+green "after the hysteria-yg script is successfully installed, enter the script again with a shortcut of hy${nc}"
+red "────────────────────────────────────────────────────────────────────────────────────${nc}"
 echo ""
-echo -e "${red}1)${PLAIN} =>  ${green}Install hysteria (required) ${PLAIN}"
-echo -e "${red}2)${PLAIN} =>  ${green}Uninstall hysteria ${PLAIN}"
+echo -e "${red}1)${nc} =>  ${cyan}Install hysteria (required) ${nc}"
+echo -e "${red}2)${nc} =>  ${cyan}Uninstall hysteria ${nc}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+white "────────────────────────────────────────────────────────────────────────────────────${nc}"
 echo ""
-echo -e "${red}3)${PLAIN} =>  ${green}Change configuration (IP priority level, transmission protocol, certificate type, verify password, range port)${PLAIN}"
-echo -e "${red}4)${PLAIN} =>  ${green}stop, open, restarthysteria${PLAIN}"
-echo -e "${red}5)${PLAIN} =>  ${green}Update hysteria-yg installation script${PLAIN}"
-echo -e "${red}6)${PLAIN} =>  ${green}Update hysteria kernel${PLAIN}"
+echo -e "${red}3)${nc} =>  ${cyan}Change configuration (IP priority level, transmission protocol, certificate type, verify password, range port)${nc}"
+echo -e "${red}4)${nc} =>  ${cyan}stop, open, restarthysteria${nc}"
+echo -e "${red}5)${nc} =>  ${cyan}Update hysteria-yg installation script${nc}"
+echo -e "${red}6)${nc} =>  ${cyan}Update hysteria kernel${nc}"
 echo ""
-white "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+white "────────────────────────────────────────────────────────────────────────────────────${nc}"
 echo ""
-echo -e "${red}7)${PLAIN} =>  ${green}Display the current hysteria sharing link, QR code, V2rayN configuration file, Clash-meta configuration file${PLAIN}"
-echo -e "${red}8)${PLAIN} =>  ${green}ACME certificate management menu${PLAIN}"
-echo -e "${red}9)${PLAIN} =>  ${green}Install WARP (optional)${PLAIN}"
-echo -e "${red}10)${PLAIN}=>  ${green}View hysteria operation log${PLAIN}"
-echo -e "${red}0)${PLAIN} =>  ${green}exit script${PLAIN}"
+echo -e "${red}7)${nc} =>  ${cyan}Display the current hysteria sharing link, QR code, V2rayN configuration file, Clash-meta configuration file${nc}"
+echo -e "${red}8)${nc} =>  ${cyan}ACME certificate management menu${nc}"
+echo -e "${red}9)${nc} =>  ${cyan}Install WARP (optional)${nc}"
+echo -e "${red}10)${nc}=>  ${cyan}View hysteria operation log${nc}"
+echo -e "${red}0)${nc} =>  ${cyan}exit script${nc}"
 echo ""
-red "────────────────────────────────────────────────────────────────────────────────────${PLAIN}"
+red "────────────────────────────────────────────────────────────────────────────────────${nc}"
 if [[ -n $(systemctl status hysteria-server 2>/dev/null | grep -w active) && -f '/etc/hysteria/config.json' ]]; then
 if [ "${hyygV}" = "${remoteV}" ]; then
 echo -e "Current hysteria-yg install script version number：${bblue}${hyygV}${plain} ，Already the latest version\n"
